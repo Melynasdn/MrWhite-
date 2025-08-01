@@ -1,0 +1,60 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import wordPairs from '../data/wordList';
+import { initializeGame } from '../redux/gameSlice';
+
+
+
+
+const Setup = () => {
+  const [difficulty, setDifficulty]= useState('easy');
+  const [playerNames, setPlayerNames]= useState(['']);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleNameChange = (index,value)=>{
+    const newNames = [...playerNames];
+    newNames[index] = value;
+    setPlayerNames(newNames); 
+  }
+  const addPlayer = ()=>{
+    setPlayerNames([...playerNames, '']);
+  };
+
+  const startGame = () =>{
+    const filteredNames = playerNames.filter(name => name.trim() !== '');
+    if(filteredNames.length < 3){
+      alert("Minimum 3 jouers !!")
+      return;
+    }
+  }
+  const pairList = wordPairs[difficulty];
+  const randomPair = pairList[Math.floor(Math.random()*pairList.length)];
+
+// Attribuer undercover et mister white
+  const shuffled = [...filteredNames].sort(()=> Math.random()- 0.5);
+  const misterWhite = shuffled.pop(); 
+  const undercover = shuffled.pop(); 
+  const normalPlayers = shuffled;
+
+
+  const players = [
+      ...normalPlayers.map(name => ({ name, role: 'citizen', word: randomPair.main })),
+      { name: undercover, role: 'undercover', word: randomPair.fakeWord },
+      { name: misterWhite, role: 'misterwhite', word: '' }
+    ].sort(() => Math.random() - 0.5);
+
+  dispatch(initializeGame({
+      players,
+      realWord: randomPair.main,
+      fakeWord: randomPair.fakeWord,
+      difficulty
+    }));
+
+    navigate('/reveal');
+
+
+
+  };
