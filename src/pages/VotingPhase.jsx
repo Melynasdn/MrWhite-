@@ -36,7 +36,9 @@ const VotingPhase = () => {
   const otherPlayers = players.filter(p => p.name !== currentPlayer.name);
 
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
+    <div 
+    className="container"
+    style={{ padding: '2rem', textAlign: 'center' }}>
       <h2>🗳️ Phase de vote</h2>
       <h3>À {currentPlayer.name} de voter</h3>
 

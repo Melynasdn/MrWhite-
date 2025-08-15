@@ -21,7 +21,9 @@ const CluePhase = () => {
     }
   }
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
+    <div
+    className="container"
+    style={{ padding: '2rem', textAlign: 'center' }}>
       <h2>💡 Phase des indices</h2>
       <h3>🎤 {currentPlayer.name}, c’est à toi !</h3>
 

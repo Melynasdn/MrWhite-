@@ -40,7 +40,9 @@ const Result = () => {
   }
 
   return (
-    <div  style={{ padding: '2rem', textAlign: 'center' }}>
+    <div  
+    className="container"
+    style={{ padding: '2rem', textAlign: 'center' }}>
       <h2> Fin de la manche</h2>
       <h3> Joueur éliminé :  {eliminatedPlayer ? eliminatedPlayer.name : 'Aucun'} </h3>
       <h4>{message}</h4>
@@ -70,7 +72,6 @@ const Result = () => {
           marginTop: '3rem',
           padding: '10px 20px',
           fontSize: '16px',
-          backgroundColor: '#4caf50',
           color: 'white',
           border: 'none',
           borderRadius: '6px',

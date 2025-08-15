@@ -53,8 +53,10 @@ const startGame = () =>{
 }
 
 return (
-    <div style={{ padding: '20px' }}>
-      <h2>👥 Joueurs</h2>
+    <div 
+    className="container"
+    style={{ padding: '20px' }}>
+      <h2> Joueurs</h2>
       {playerNames.map((name, i) => (
         <input
           key={i}
@@ -62,21 +64,21 @@ return (
           value={name}
           placeholder={`Joueur ${i + 1}`}
           onChange={e => handleNameChange(i, e.target.value)}
-          style={{ display: 'block', marginBottom: '10px' }}
+          style={{ display: 'block', marginBottom: '10px' , margin:'0 auto'}}
         />
       ))}
-      <button onClick={addPlayer}>➕ Ajouter un joueur</button>
+      <button onClick={addPlayer}> Ajouter un joueur</button>
 
-      <h3>🎯 Difficulté</h3>
+      <h3> Difficulté</h3>
       <select value={difficulty} onChange={e => setDifficulty(e.target.value)}>
 
- <option value="easy">easy</option>
-  <option value="medium">medium</option>
-  <option value="hard">hard</option>
+         <option value="easy">easy</option>
+         <option value="medium">medium</option>
+         <option value="hard">hard</option>
       </select>
 
       <br /><br />
-      <button onClick={startGame}>🚀 Commencer la partie</button>
+      <button onClick={startGame}> Commencer la partie</button>
     </div>
   );
 }
