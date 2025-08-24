@@ -37,21 +37,21 @@ if (!currentPlayer) {
     <div 
     className="container"
     style={{ padding: '20px', textAlign: 'center' }}>
-      <h2>👀 {isIdentityRevealed ? 'Voici ton mot' : `À ${currentPlayer.name} de jouer`}</h2>
+      <h2> {isIdentityRevealed ? 'Voici ton mot' : `À ${currentPlayer.name} de jouer`}</h2>
 
       {!isIdentityRevealed ? (
         <button onClick={handleReveal} style={{ padding: '10px 20px', fontSize: '16px' }}>
-          ✅ Je suis {currentPlayer.name}
+           Je suis {currentPlayer.name}
         </button>
       ) : (
         <div>
           {currentPlayer.role === 'misterwhite' ? (
-            <p>❓ Tu es <strong>Mister White</strong> ! Tu n’as aucun mot. Essaie de deviner !</p>
+            <p> Tu es <strong>Mister White</strong> ! Tu n’as aucun mot. Essaie de deviner !</p>
           ) : (
-            <p>📝 Ton mot est : <strong>{currentPlayer.word}</strong></p>
+            <p> Ton mot est : <strong>{currentPlayer.word}</strong></p>
           )}
           <button onClick={handleNext} style={{ marginTop: '20px' }}>
-            🔄 Passer à la personne suivante
+             Passer à la personne suivante
           </button>
         </div>
       )}

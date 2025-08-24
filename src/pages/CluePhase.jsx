@@ -16,7 +16,6 @@ const CluePhase = () => {
     if (currentIndex +1 < players.length) {
       setCurrentIndex(currentIndex + 1);
     }else{
-      // Si c'est le dernier joueur, on passe à la phase de vote*
       navigate('/vote');
     }
   }
@@ -24,8 +23,8 @@ const CluePhase = () => {
     <div
     className="container"
     style={{ padding: '2rem', textAlign: 'center' }}>
-      <h2>💡 Phase des indices</h2>
-      <h3>🎤 {currentPlayer.name}, c’est à toi !</h3>
+      <h2> Phase des indices</h2>
+      <h3>{currentPlayer.name}, c’est à toi !</h3>
 
       <p>Donne un indice à voix haute à propos de ton mot (sans le dire directement).</p>
 
@@ -33,7 +32,7 @@ const CluePhase = () => {
         onClick={handleNext}
         style={{ marginTop: '2rem', padding: '10px 20px', fontSize: '16px' }}
       >
-        {currentIndex + 1 < players.length ? '👉 Joueur suivant' : '🗳️ Passer au vote'}
+        {currentIndex + 1 < players.length ? ' Joueur suivant' : '🗳️ Passer au vote'}
       </button>
     </div>
   )

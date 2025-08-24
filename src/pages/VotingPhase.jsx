@@ -39,7 +39,7 @@ const VotingPhase = () => {
     <div 
     className="container"
     style={{ padding: '2rem', textAlign: 'center' }}>
-      <h2>🗳️ Phase de vote</h2>
+      <h2> Phase de vote</h2>
       <h3>À {currentPlayer.name} de voter</h3>
 
       <p>Choisis un joueur à éliminer :</p>
@@ -67,7 +67,7 @@ const VotingPhase = () => {
         onClick={handleVote}
         style={{ marginTop: '2rem', padding: '10px 20px' }}
       >
-        ✅ Voter
+         Voter
       </button>
     </div>
   )
