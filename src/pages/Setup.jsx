@@ -162,6 +162,11 @@ const handleKeyDown = (e, index) => {
       <button style={styles.button} onClick={startGame}>
         Commencer la partie
       </button>
+      <br/>
+      <button style={styles.button} onClick={() => navigate("/rules")}>
+    Comment jouer ?
+</button>
+
     </div>
   );
 }
