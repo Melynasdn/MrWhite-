@@ -54,8 +54,8 @@ const Result = () => {
             padding: '1rem',
             borderRadius: '8px',
             width: '180px',
-            backgroundColor: player.role === 'misterwhite' ? '#ffe6e6' :
-                             player.role === 'undercover' ? '#fff8dc' : '#e6f7ff'
+            backgroundColor: player.role === 'misterwhite' ? '#1b2a6eff' :
+                             player.role === 'undercover' ? '#16439eff' : '#162264ff'
           }}>
             <h4>{player.name}</h4>
             <p><strong>Rôle :</strong> {player.role}</p>
@@ -78,7 +78,7 @@ const Result = () => {
           cursor: 'pointer',
         }}
       >
-        🔁 Rejouer une partie
+         Rejouer une partie
       </button>
 
 

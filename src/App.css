@@ -1,31 +1,67 @@
-
 body {
   margin: 0;
   padding: 0;
-    font-family: 'Poppins', sans-serif;
-  background: #fdfdfd;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #141E30, #243B55);
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px);
+  background-size: 60px 60px;
+  animation: moveBubbles 10s linear infinite;
+  z-index: 0;            
+  pointer-events: none;    /* ne bloque plus les clics */
+}
+
+.container, button, select, input {
+  position: relative; 
+  z-index: 1; /* ne bloque plus les clics */
+}
+
+@keyframes moveBubbles {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-60px); }
+}
+
+
 h1, h2, h3, h4 {
-  color: #2c3e50;
+  color: #ebf5ff;
 }
 
 button {
-  background-color: #120456;
+  background: linear-gradient(145deg, #7dfc3d, #32cd32); 
   color: white;
+  font-weight: bold;
+  font-size: 20px;
   border: none;
-  padding: 10px 20px;
-  margin-top: 15px;
-  font-size: 16px;
+  padding: 15px 40px;
+  border-radius: 50px; /* bien arrondi */
   cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+  box-shadow: 0 6px #28a428; /* effet ombre dessous */
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 
 button:hover {
-  background-color: #277aae;
+  transform: translateY(-3px); /* léger effet de "saut" */
+  box-shadow: 0 8px #1f8c1f;
 }
+
+button:active {
+  transform: translateY(2px); /* effet pressé */
+  box-shadow: 0 3px #1f8c1f;
+}
+
 
 input[type="text"], select {
   padding: 10px;
