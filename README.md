@@ -44,7 +44,7 @@ npm start
 
 ✨ Have Fun !!
 
-Règles du jeu
+# Règles du jeu
 
 Chaque joueur entre son prénom.
 
@@ -57,7 +57,7 @@ Après chaque tour, les joueurs votent pour éliminer celui qu’ils pensent êt
 La partie continue jusqu’à ce que Mister White soit éliminé... ou qu’il devine le mot !
 
 
- Fonctionnalités
+#  Fonctionnalités
 
 Ajout de joueurs avec interface intuitive
 
