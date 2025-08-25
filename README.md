@@ -1,12 +1,76 @@
-# React + Vite
+# 🎭 Mister White - Jeu en ligne
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un petit jeu multijoueur inspiré de **Undercover / Mister White**, développé avec **ReactJS**. 
+Chaque joueur reçoit un mot secret... sauf **Mister White** !  
+Le but : découvrir qui est Mister White avant qu’il ne vous élimine 😈.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Démo
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies utilisées
+- ReactJS (Front-end)
+- Redux Toolkit (Gestion d’état)
+- React Router (Navigation entre les pages)
+- CSS (pour le style)
+  
+---
+
+## 📥 Installation
+
+1. Clone le projet :
+   ```bash
+   git clone https://github.com/ton-compte/MisterWhite.git
+   
+2. Va dans le dossier :
+
+cd MisterWhite
+
+
+3. Installe les dépendances :
+
+npm install
+
+
+4. Lance le jeu :
+
+npm start
+
+5. Have Fun !!
+
+
+Règles du jeu
+
+Chaque joueur entre son prénom.
+
+Un mot secret est attribué à tous les joueurs sauf Mister White.
+
+À tour de rôle, chaque joueur décrit son mot sans le dire explicitement.
+
+Après chaque tour, les joueurs votent pour éliminer celui qu’ils pensent être Mister White.
+
+La partie continue jusqu’à ce que Mister White soit éliminé... ou qu’il devine le mot !
+
+
+ Fonctionnalités
+
+Ajout de joueurs avec interface intuitive
+
+Attribution automatique des rôles
+
+Phase de vote avec résultats
+
+Effets visuels dynamiques (fond animé )
+
+ Améliorations futures
+
+Mode en ligne multijoueur (WebSocket)
+
+Timer pour limiter le temps de parole
+
+Choix des mots par niveau de difficulté
+
+Score / Classement entre parties
