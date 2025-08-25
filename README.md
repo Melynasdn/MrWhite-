@@ -12,16 +12,16 @@ Le but : découvrir qui est Mister White avant qu’il ne vous élimine 😈.
 
 ---
 
-## 🚀 Démo
+##  Démo
 
-
+ComingSoon
 ---
 
 ## 🛠️ Technologies utilisées
-- ReactJS (Front-end)
-- Redux Toolkit (Gestion d’état)
-- React Router (Navigation entre les pages)
-- CSS (pour le style)
+- ReactJS 
+- Redux Toolkit 
+- React Router 
+- CSS 
   
 ---
 
@@ -31,22 +31,17 @@ Le but : découvrir qui est Mister White avant qu’il ne vous élimine 😈.
    ```bash
    git clone https://github.com/ton-compte/MisterWhite.git
    
-2. Va dans le dossier :
 
+# 2. Va dans le dossier :
 cd MisterWhite
 
-
-3. Installe les dépendances :
-
+# 3. Installe les dépendances :
 npm install
 
-
-4. Lance le jeu :
-
+# 4. Lance le jeu :
 npm start
 
-5. Have Fun !!
-
+✨ Have Fun !!
 
 Règles du jeu
 
