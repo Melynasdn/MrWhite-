@@ -33,12 +33,15 @@ ComingSoon
    
 
 # 2. Va dans le dossier :
+```bash
 cd MisterWhite
 
 # 3. Installe les dépendances :
+```bash
 npm install
 
 # 4. Lance le jeu :
+```bash
 npm start
 
 ✨ Have Fun !!
