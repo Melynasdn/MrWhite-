@@ -1,4 +1,10 @@
-# 🎭 Mister White - Jeu en ligne
+# 🎭 Mister White - Jeu en ligne 
+
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-Toolkit-764ABC?logo=redux&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Project-Active-brightgreen)
+![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 
 Un petit jeu multijoueur inspiré de **Undercover / Mister White**, développé avec **ReactJS**. 
 Chaque joueur reçoit un mot secret... sauf **Mister White** !  
