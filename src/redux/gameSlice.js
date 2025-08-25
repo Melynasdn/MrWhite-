@@ -37,15 +37,23 @@ const gameSlice = createSlice({
         resetVotes: (state) => {
             state.votes = [];
         },
-        resetGame: (state) => {
-  state.players = [];
-  state.realWord = '';
-  state.fakeWord = '';
-  state.difficulty = 'easy';
-  state.currentPlayerIndex = 0;
-  state.phase = 'setup';
-  state.votes = [];
+        resetGame: (state, action) => {
+            const { keepPlayers } = action.payload || {};
+
+              state.votes = [];
+              state.round = 1;
+
+              if (!keepPlayers) {
+                     state.players = []; 
+              } else {
+                 state.players = state.players.map(player => ({
+                 ...player,
+                  role: null,
+                word: null,
+    }));
+  }
 }
+
 
 
     }

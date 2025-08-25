@@ -37,32 +37,40 @@ const VotingPhase = () => {
 
   return (
     <div 
-    className="container"
-    style={{ padding: '2rem', textAlign: 'center' }}>
+    className="container">
       <h2> Phase de vote</h2>
       <h3>À {currentPlayer.name} de voter</h3>
 
       <p>Choisis un joueur à éliminer :</p>
-      {
-        otherPlayers.map(
-          (p,i)=> (
-            <div key={i}>
-          <label>
-            <input
-              type="radio"
-              name="vote"
-              value={p.name}
-              checked={selected === p.name}
-              onChange={() => setSelected(p.name)}
-            />
-            {p.name}
-          </label>
-          
-          
-        </div>
-          )
-        )
-      }
+      {otherPlayers.map((p, i) => (
+  <label 
+    key={i} 
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "10px",
+      margin: "10px auto",
+      padding: "10px 15px",
+      borderRadius: "8px",
+      cursor: "pointer",
+      width: "100%",
+      backgroundColor: selected === p.name ? "#1b2a6e" : "#243B55",
+      border: selected === p.name ? "2px solid #00c6ff" : "2px solid transparent",
+      transition: "all 0.3s ease"
+    }}
+  >
+    <input
+      type="radio"
+      name="vote"
+      value={p.name}
+      checked={selected === p.name}
+      onChange={() => setSelected(p.name)}
+      style={{ display: "none" }}  
+    />
+    <span style={{ fontSize: "18px", margin:"auto"}}>{p.name}</span>
+  </label>
+))}
+
       <button
         onClick={handleVote}
         style={{ marginTop: '2rem', padding: '10px 20px' }}

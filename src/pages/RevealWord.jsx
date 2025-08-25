@@ -35,8 +35,7 @@ if (!currentPlayer) {
 
   return (
     <div 
-    className="container"
-    style={{ padding: '20px', textAlign: 'center' }}>
+    className="container">
       <h2> {isIdentityRevealed ? 'Voici ton mot' : `À ${currentPlayer.name} de jouer`}</h2>
 
       {!isIdentityRevealed ? (
